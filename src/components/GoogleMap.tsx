@@ -1,14 +1,15 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { monitoredLocations } from '@/lib/ai-utils';
 
+const DEFAULT_API_KEY = "AIzaSyAraVzrGGD7HF-NmhdgdUMx14LYSp6vOc4";
+
 const GoogleMap = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<google.maps.Map | null>(null);
-  const [apiKey, setApiKey] = useState(localStorage.getItem('googleMapsApiKey') || '');
+  const [apiKey, setApiKey] = useState(localStorage.getItem('googleMapsApiKey') || DEFAULT_API_KEY);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
