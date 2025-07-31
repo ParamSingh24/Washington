@@ -10,7 +10,8 @@ import {
   Map,
   User,
   Settings,
-  Heart
+  Heart,
+  Plane
 } from "lucide-react";
 
 const Navigation = () => {
@@ -20,6 +21,7 @@ const Navigation = () => {
     { path: '/', label: 'Dashboard', icon: <Activity className="h-5 w-5" /> },
     { path: '/symptoms', label: 'Report Symptoms', icon: <Bell className="h-5 w-5" /> },
     { path: '/map', label: 'Outbreak Map', icon: <Map className="h-5 w-5" /> },
+    { path: '/travel', label: 'Travel Health', icon: <Plane className="h-5 w-5" /> },
     { path: '/chat', label: 'Medical Assistant', icon: <MessageCircle className="h-5 w-5" /> },
   ];
   
